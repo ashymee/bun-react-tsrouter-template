@@ -1,0 +1,43 @@
+{
+  "name": "bun-react-tsrouter-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/server.tsx",
+  "module": "src/server.tsx",
+  "scripts": {
+    "gen": "tsr generate",
+    "watch": "tsr watch",
+    "hot": "bun --hot src/server.tsx",
+    "dev": "concurrently \"bun run watch\" \"bun run hot\"",
+    "start": "NODE_ENV=production bun src/server.tsx",
+    "build": "bun run gen && bun run build.ts"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^4.1.0",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tanstack/react-router": "^1.120.10",
+    "@tanstack/react-router-devtools": "^1.120.10",
+    "bun-plugin-tailwind": "^0.0.14",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-hook-form": "^7.54.2",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.6",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@tanstack/router-cli": "^1.120.10",
+    "@types/bun": "latest",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.3"
+  }
+}
